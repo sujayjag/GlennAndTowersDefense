@@ -42,8 +42,7 @@ public class Employee {
         String s = String.format("Name: %s, Position: %s, Department: %s, Salary: %d, Gender: %s, Has Dependents: %b\n", getName(), getPosition(), getDepartment(), getSalary(), getGender(), isHasDependents());
         return s;
     }
-
-
+    
     public String getGraph() {
         List<String> graph = callGraph(this);
 

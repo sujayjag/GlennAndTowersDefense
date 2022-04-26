@@ -12,20 +12,16 @@ public class Employee extends EmployeeComponent {
     private boolean hasDependents = false;
     private List<EmployeeComponent> subordinates = new ArrayList<>();
 
-    public Employee(String name, String position, String department, int salary, String gender) {
-        super(name, position, department, salary, gender);
+    public Employee(String name, String position, String department, int salary, String gender, boolean hasDependents) {
+        super(name, position, department, salary, gender, hasDependents);
     }
 
     public void add(Employee e) {
         getSubordinates().add(e);
-        setHasDependents(true);
     }
 
     public void remove(Employee e) {
         getSubordinates().remove(e);
-        if(getSubordinates().isEmpty()) {
-            setHasDependents(false);
-        }
     }
 
     public Employee getChild(int i) {

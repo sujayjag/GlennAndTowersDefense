@@ -2,19 +2,19 @@ package project3new;
 
 public class Driver {
     public static void main(String[] args) {
-        Employee ceo = new Employee("James Borg", "CEO", "HQ", 220000, "Male");
+        Employee ceo = new Employee("James Borg", "CEO", "HQ", 220000, "Male", false);
 
-        Employee cfo = new Employee("Jennifer Wallace", "CFO", "Administration", 172000, "Female");
+        Employee cfo = new Employee("Jennifer Wallace", "CFO", "Administration", 172000, "Female", true);
 
-        Employee crado = new Employee("Franklin Wong", "CRADO", "R&D", 160000, "Male");
+        Employee crado = new Employee("Franklin Wong", "CRADO", "R&D", 160000, "Male", true);
 
-        Employee officeManager = new Employee("Alicia Zelaya", "Office Manager", "Administration", 75000, "Female");
+        Employee officeManager = new Employee("Alicia Zelaya", "Office Manager", "Administration", 75000, "Female", false);
 
-        Employee admin = new Employee("Ahmad Jabbar", "Admin", "Administration", 100000, "Male");
+        Employee admin = new Employee("Ahmad Jabbar", "Admin", "Administration", 100000, "Male", false);
 
-        Employee researchAssistant = new Employee("John Smith", "Research Assistant", "R&D", 120000, "Male");
+        Employee researchAssistant = new Employee("John Smith", "Research Assistant", "R&D", 120000, "Male", true);
 
-        Employee dataScientist = new Employee("Ramesh Narayan", "Data Scientist", "R&D", 152000, "Male");
+        Employee dataScientist = new Employee("Ramesh Narayan", "Data Scientist", "R&D", 152000, "Male", false);
 
         ceo.add(cfo);
         ceo.add(crado);
@@ -41,7 +41,7 @@ public class Driver {
         System.out.println("REPORT 4");
         System.out.print(company.employees.getReport4());
 
-        dataScientist.add(new Employee("Joyce English", "ML Engineer", "R&D", 140000, "Female"));
+        dataScientist.add(new Employee("Joyce English", "ML Engineer", "R&D", 140000, "Female", false));
 
         //new Report 1
         System.out.println("NEW REPORT 1");

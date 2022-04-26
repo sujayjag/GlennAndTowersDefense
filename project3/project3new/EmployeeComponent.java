@@ -9,17 +9,17 @@ public abstract class EmployeeComponent {
     private String department;
     private int salary;
     private String gender;
-    private boolean hasDependents = false;
+    private boolean hasDependents;
     private List<EmployeeComponent> subordinates = new ArrayList<>();
 
-    public EmployeeComponent(String name, String position, String department, int salary, String gender) {
+    public EmployeeComponent(String name, String position, String department, int salary, String gender, boolean hasDependents) {
         this.setName(name);
         this.setPosition(position);
         this.setDepartment(department);
         this.setSalary(salary);
         this.setGender(gender);
         //this.subordinates = subordinates;
-        //this.hasDependents = subordinates.isEmpty();
+        this.setHasDependents(hasDependents);
     }
 
     public void add(Employee e) {

@@ -2,12 +2,12 @@ package project2;
 
 public class HPiLaptop extends Computer {
     public HPiLaptop() {
-        name = "HPi Laptop";
-        memory = "a light HPi memory";
-        CPU = "a light HPi cpu";
-        HDD = "a light HPi hdd";
-        GPU = "a light HPi gpu";
+        setName("HPi Laptop");
+        setMemory("a light HPi memory");
+        setCPU("a light HPi cpu");
+        setHDD("a light HPi hdd");
+        setGPU("a light HPi gpu");
 
-        extras.add("a light WiFi card");
+        getExtras().add("a light WiFi card");
     }
 }

@@ -3,12 +3,12 @@ package project2;
 
 public class HPiServer extends Computer {
     public HPiServer() {
-        name = "HPi Server";
-        memory = "multiple HPi memory chips";
-        CPU = "a powerful HPi cpu with many cores";
-        HDD = "multiple HPi hdds";
-        GPU = "a generic HPi gpu";
+        setName("HPi Server");
+        setMemory("multiple HPi memory chips");
+        setCPU("a powerful HPi cpu with many cores");
+        setHDD("multiple HPi hdds");
+        setGPU("a generic HPi gpu");
 
-        extras.add("a powerful HPi network card");
+        getExtras().add("a powerful HPi network card");
     }
 }

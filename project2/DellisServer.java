@@ -2,12 +2,12 @@ package project2;
 
 public class DellisServer extends Computer {
     public DellisServer() {
-        name = "Dellis Server";
-        memory = "multiple Dellis memory chips";
-        CPU = "a powerful Dellis cpu with many cores";
-        HDD = "multiple Dellis hdds";
-        GPU = "a generic Dellis gpu";
+        setName("Dellis Server");
+        setMemory("multiple Dellis memory chips");
+        setCPU("a powerful Dellis cpu with many cores");
+        setHDD("multiple Dellis hdds");
+        setGPU("a generic Dellis gpu");
 
-        extras.add("a powerful Dellis network card");
+        getExtras().add("a powerful Dellis network card");
     }
 }

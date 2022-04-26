@@ -2,13 +2,13 @@ package project2;
 
 public class DellisWorkstation extends Computer {
     public DellisWorkstation() {
-        name = "Dellis Workstation";
-        memory = "Dellis memory";
-        CPU = "Dellis cpu";
-        HDD = "Dellis hdd";
-        GPU = "a powerful Dellis gpu";
+        setName("Dellis Workstation");
+        setMemory("Dellis memory");
+        setCPU("Dellis cpu");
+        setHDD("Dellis hdd");
+        setGPU("a powerful Dellis gpu");
 
-        extras.add("an audio card");
-        extras.add("a generic network card");
+        getExtras().add("an audio card");
+        getExtras().add("a generic network card");
     }
 }

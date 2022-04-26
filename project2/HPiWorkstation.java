@@ -2,13 +2,13 @@ package project2;
 
 public class HPiWorkstation extends Computer {
     public HPiWorkstation() {
-        name = "HPi Workstation";
-        memory = "HPi memory";
-        CPU = "HPi cpu";
-        HDD = "HPi hdd";
-        GPU = "a powerful HPi gpu";
+        setName("HPi Workstation");
+        setMemory("HPi memory");
+        setCPU("HPi cpu");
+        setHDD("HPi hdd");
+        setGPU("a powerful HPi gpu");
 
-        extras.add("an audio card");
-        extras.add("a generic network card");
+        getExtras().add("an audio card");
+        getExtras().add("a generic network card");
     }
 }

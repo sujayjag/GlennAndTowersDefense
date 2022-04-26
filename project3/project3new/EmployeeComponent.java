@@ -11,7 +11,7 @@ public abstract class EmployeeComponent {
     private String gender;
     private boolean hasDependents;
     private List<EmployeeComponent> subordinates = new ArrayList<>();
-
+//
     public EmployeeComponent(String name, String position, String department, int salary, String gender, boolean hasDependents) {
         this.setName(name);
         this.setPosition(position);

@@ -7,10 +7,6 @@ public class Company {
         this.setEmployees(employees);
     }
 
-    public void printReport1() {
-        System.out.println(this.getEmployees().getGraph());
-    }
-
     public EmployeeComponent getEmployees() {
         return employees;
     }

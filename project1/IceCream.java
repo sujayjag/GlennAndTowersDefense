@@ -1,7 +1,7 @@
 package project1;
 
 public abstract class IceCream {
-    String description = "Basic Ice Cream";
+    protected String description = "Basic Ice Cream";
 
     public String getDescription() {
         return this.description;

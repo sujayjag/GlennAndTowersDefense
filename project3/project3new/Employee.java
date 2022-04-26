@@ -1,9 +1,9 @@
-package project3;
+package project3new;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Employee {
+public class Employee extends EmployeeComponent {
     private String name;
     private String position;
     private String department;
@@ -13,13 +13,7 @@ public class Employee {
     private List<Employee> subordinates = new ArrayList<>();
 
     public Employee(String name, String position, String department, int salary, String gender) {
-        this.setName(name);
-        this.setPosition(position);
-        this.setDepartment(department);
-        this.setSalary(salary);
-        this.setGender(gender);
-        //this.subordinates = subordinates;
-        //this.hasDependents = subordinates.isEmpty();
+        super(name, position, department, salary, gender);
     }
 
     public void add(Employee e) {

@@ -1,4 +1,6 @@
+package project1;
 public abstract class FlavorDecorator extends IceCream {
-    IceCream iceCream;
+    @Override
     public abstract String getDescription();
+    IceCream iceCream;
 }

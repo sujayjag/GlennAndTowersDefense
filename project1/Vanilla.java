@@ -1,3 +1,5 @@
+package project1;
+
 public class Vanilla extends FlavorDecorator {
     public Vanilla(IceCream iceCream) {
         this.iceCream = iceCream;

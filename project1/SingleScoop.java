@@ -1,3 +1,5 @@
+package project1;
+
 public class SingleScoop extends IceCream {
 
     public SingleScoop() {

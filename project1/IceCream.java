@@ -1,3 +1,5 @@
+package project1;
+
 public abstract class IceCream {
     String description = "Basic Ice Cream";
 

@@ -1,3 +1,5 @@
+package project1;
+
 public class WhippedCream extends ToppingDecorator {
     public WhippedCream(IceCream iceCream) {
         this.iceCream = iceCream;

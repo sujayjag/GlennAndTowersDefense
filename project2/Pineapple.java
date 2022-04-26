@@ -7,7 +7,6 @@ public abstract class Pineapple {
         Computer computer = createComputer(type);
         System.out.println("--- Making a " + computer.getName() + " ---");
         computer.prepare();
-
         return computer;
     }
 }

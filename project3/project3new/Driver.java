@@ -27,37 +27,37 @@ public class Driver {
 
         //Report 1
         System.out.println("REPORT 1");
-        System.out.print(company.employees.getGraph());
+        System.out.print(company.getEmployees().getGraph());
 
         //Report 2
         System.out.println("REPORT 2");
-        System.out.print(company.employees.getReport2());
+        System.out.print(company.getEmployees().getReport2());
 
         //Report 3
         System.out.println("REPORT 3");
-        System.out.print(company.employees.getReport3());
+        System.out.print(company.getEmployees().getReport3());
 
         //Report 4
         System.out.println("REPORT 4");
-        System.out.print(company.employees.getReport4());
+        System.out.println(company.getEmployees().getReport4());
 
         dataScientist.add(new Employee("Joyce English", "ML Engineer", "R&D", 140000, "Female", false));
 
         //new Report 1
         System.out.println("NEW REPORT 1");
-        System.out.print(company.employees.getGraph());
+        System.out.print(company.getEmployees().getGraph());
 
         //new Report 2
         System.out.println("NEW REPORT 2");
-        System.out.print(company.employees.getReport2());
+        System.out.print(company.getEmployees().getReport2());
 
         //new Report 3
         System.out.println("NEW REPORT 3");
-        System.out.print(company.employees.getReport3());
+        System.out.print(company.getEmployees().getReport3());
 
         //new Report 4
         System.out.println("NEW REPORT 4");
-        System.out.print(company.employees.getReport4());
+        System.out.println(company.getEmployees().getReport4());
     }
 
 }

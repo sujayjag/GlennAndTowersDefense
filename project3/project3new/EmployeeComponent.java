@@ -22,15 +22,15 @@ public abstract class EmployeeComponent {
         this.setHasDependents(hasDependents);
     }
 
-    public void add(Employee e) {
+    public void add(EmployeeComponent e) {
         throw new UnsupportedOperationException();
     }
 
-    public void remove(Employee e) {
+    public EmployeeComponent remove(EmployeeComponent e) {
         throw new UnsupportedOperationException();
     }
 
-    public Employee getChild(int i) {
+    public EmployeeComponent getChild(int i) {
         throw new UnsupportedOperationException();
     }
 
@@ -43,11 +43,11 @@ public abstract class EmployeeComponent {
         throw new UnsupportedOperationException();
     }
 
-    private List<String> callGraph(Employee cur) {
+    private List<String> callGraph(EmployeeComponent cur) {
         throw new UnsupportedOperationException();
     }
 
-    private void rGetGraph(Employee cur, List<String> l) {
+    private void rGetGraph(EmployeeComponent cur, List<String> l) {
 
         throw new UnsupportedOperationException();
 
@@ -64,7 +64,7 @@ public abstract class EmployeeComponent {
 
 
 
-    public int getReport4() {
+    public double getReport4() {
         throw new UnsupportedOperationException();
     }
 

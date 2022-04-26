@@ -9,23 +9,24 @@ public class Employee extends EmployeeComponent {
     private String department;
     private int salary;
     private String gender;
-    private boolean hasDependents = false;
+    private boolean hasDependents;
     private List<EmployeeComponent> subordinates = new ArrayList<>();
 
     public Employee(String name, String position, String department, int salary, String gender, boolean hasDependents) {
         super(name, position, department, salary, gender, hasDependents);
     }
 
-    public void add(Employee e) {
+    public void add(EmployeeComponent e) {
         getSubordinates().add(e);
     }
 
-    public void remove(Employee e) {
+    public EmployeeComponent remove(EmployeeComponent e) {
         getSubordinates().remove(e);
+        return e;
     }
 
-    public Employee getChild(int i) {
-        return (Employee) getSubordinates().get(i);
+    public EmployeeComponent getChild(int i) {
+        return getSubordinates().get(i);
     }
 
     public String toString() {
@@ -51,8 +52,7 @@ public class Employee extends EmployeeComponent {
 
         l.add(cur.toString());
 
-
-        if(!cur.isHasDependents()) {
+        if(cur.getSubordinates().size() == 0) {
             return;
         }
         for(EmployeeComponent e : cur.getSubordinates()) {
@@ -79,7 +79,7 @@ public class Employee extends EmployeeComponent {
             l.add(cur.toString());
         }
 
-        if(!cur.isHasDependents()) {
+        if(cur.getSubordinates().size() == 0) {
             return;
         }
         for(EmployeeComponent e : cur.getSubordinates()) {
@@ -106,7 +106,7 @@ public class Employee extends EmployeeComponent {
             l.add(cur.toString());
         }
 
-        if(!cur.isHasDependents()) {
+        if(cur.getSubordinates().size() == 0) {
             return;
         }
         for(EmployeeComponent e : cur.getSubordinates()) {
@@ -115,7 +115,7 @@ public class Employee extends EmployeeComponent {
 
     }
 
-    public int getReport4() {
+    public double getReport4() {
         List<Integer> graph = callReport4(this);
 
         int count = 0;
@@ -124,7 +124,7 @@ public class Employee extends EmployeeComponent {
             count += num;
         }
 
-        return count/graph.size();
+        return (double) count/graph.size();
     }
 
     private List<Integer> callReport4(EmployeeComponent cur) {
@@ -138,7 +138,7 @@ public class Employee extends EmployeeComponent {
         l.add(cur.getSalary());
 
 
-        if(!cur.isHasDependents()) {
+        if(cur.getSubordinates().size() == 0) {
             return;
         }
         for(EmployeeComponent e : cur.getSubordinates()) {

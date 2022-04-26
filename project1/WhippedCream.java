@@ -10,6 +10,11 @@ public class WhippedCream extends ToppingDecorator {
     }
 
     public double getCost() {
-        return iceCream.getCost() + 0.50;
+        double cost = iceCream.getCost();
+        cost += 0.50;
+        cost*=100;
+        cost = Math.round(cost);
+        cost/=100;
+        return cost;
     }
 }

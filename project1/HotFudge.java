@@ -11,6 +11,11 @@ public class HotFudge extends ToppingDecorator {
     }
 
     public double getCost() {
-        return iceCream.getCost() + 0.99;
+        double cost = iceCream.getCost();
+        cost += 0.99;
+        cost*=100;
+        cost = Math.round(cost);
+        cost/=100;
+        return cost;
     }
 }

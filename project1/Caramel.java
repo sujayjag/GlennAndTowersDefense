@@ -13,6 +13,11 @@ public class Caramel extends ToppingDecorator {
 
     
     public double getCost() {
-        return iceCream.getCost() + 0.89;
+        double cost = iceCream.getCost();
+        cost += 0.89;
+        cost*=100;
+        cost = Math.round(cost);
+        cost/=100;
+        return cost;
     }
 }

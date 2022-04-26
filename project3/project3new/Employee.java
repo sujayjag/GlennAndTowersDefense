@@ -10,7 +10,7 @@ public class Employee extends EmployeeComponent {
     private int salary;
     private String gender;
     private boolean hasDependents = false;
-    private List<Employee> subordinates = new ArrayList<>();
+    private List<EmployeeComponent> subordinates = new ArrayList<>();
 
     public Employee(String name, String position, String department, int salary, String gender) {
         super(name, position, department, salary, gender);
@@ -29,7 +29,7 @@ public class Employee extends EmployeeComponent {
     }
 
     public Employee getChild(int i) {
-        return getSubordinates().get(i);
+        return (Employee) getSubordinates().get(i);
     }
 
     public String toString() {
@@ -45,21 +45,21 @@ public class Employee extends EmployeeComponent {
         return listString;
     }
 
-    private List<String> callGraph(Employee cur) {
+    private List<String> callGraph(EmployeeComponent cur) {
         List<String> l = new ArrayList<>();
         rGetGraph(cur, l);
         return l;
     }
 
-    private void rGetGraph(Employee cur, List<String> l) {
+    private void rGetGraph(EmployeeComponent cur, List<String> l) {
 
         l.add(cur.toString());
 
 
-        if(!cur.hasDependents) {
+        if(!cur.isHasDependents()) {
             return;
         }
-        for(Employee e : cur.getSubordinates()) {
+        for(EmployeeComponent e : cur.getSubordinates()) {
             rGetGraph(e, l);
         }
 
@@ -72,21 +72,21 @@ public class Employee extends EmployeeComponent {
         return listString;
     }
 
-    private List<String> callReport2(Employee cur) {
+    private List<String> callReport2(EmployeeComponent cur) {
         List<String> l = new ArrayList<>();
         report2(cur, l);
         return l;
     }
 
-    private void report2(Employee cur, List<String> l) {
-        if(cur.hasDependents && cur.gender.equals("Male")) {
+    private void report2(EmployeeComponent cur, List<String> l) {
+        if(cur.isHasDependents() && cur.getGender().equals("Male")) {
             l.add(cur.toString());
         }
 
-        if(!cur.hasDependents) {
+        if(!cur.isHasDependents()) {
             return;
         }
-        for(Employee e : cur.getSubordinates()) {
+        for(EmployeeComponent e : cur.getSubordinates()) {
             report2(e, l);
         }
 
@@ -99,21 +99,21 @@ public class Employee extends EmployeeComponent {
         return listString;
     }
 
-    private List<String> callReport3(Employee cur) {
+    private List<String> callReport3(EmployeeComponent cur) {
         List<String> l = new ArrayList<>();
         report3(cur, l);
         return l;
     }
 
-    private void report3(Employee cur, List<String> l) {
-        if(cur.gender.equals("Female")) {
+    private void report3(EmployeeComponent cur, List<String> l) {
+        if(cur.getGender().equals("Female")) {
             l.add(cur.toString());
         }
 
-        if(!cur.hasDependents) {
+        if(!cur.isHasDependents()) {
             return;
         }
-        for(Employee e : cur.getSubordinates()) {
+        for(EmployeeComponent e : cur.getSubordinates()) {
             report3(e, l);
         }
 
@@ -131,21 +131,21 @@ public class Employee extends EmployeeComponent {
         return count/graph.size();
     }
 
-    private List<Integer> callReport4(Employee cur) {
+    private List<Integer> callReport4(EmployeeComponent cur) {
         List<Integer> l = new ArrayList<>();
         report4(cur, l);
         return l;
     }
 
-    private void report4(Employee cur, List<Integer> l) {
+    private void report4(EmployeeComponent cur, List<Integer> l) {
 
-        l.add(cur.salary);
+        l.add(cur.getSalary());
 
 
-        if(!cur.hasDependents) {
+        if(!cur.isHasDependents()) {
             return;
         }
-        for(Employee e : cur.getSubordinates()) {
+        for(EmployeeComponent e : cur.getSubordinates()) {
             report4(e, l);
         }
 
@@ -201,11 +201,11 @@ public class Employee extends EmployeeComponent {
         this.hasDependents = hasDependents;
     }
 
-    public List<Employee> getSubordinates() {
+    public List<EmployeeComponent> getSubordinates() {
         return subordinates;
     }
 
-    public void setSubordinates(List<Employee> subordinates) {
+    public void setSubordinates(List<EmployeeComponent> subordinates) {
         this.subordinates = subordinates;
     }
 }

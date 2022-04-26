@@ -10,7 +10,7 @@ public abstract class EmployeeComponent {
     private int salary;
     private String gender;
     private boolean hasDependents = false;
-    private List<Employee> subordinates = new ArrayList<>();
+    private List<EmployeeComponent> subordinates = new ArrayList<>();
 
     public EmployeeComponent(String name, String position, String department, int salary, String gender) {
         this.setName(name);
@@ -118,11 +118,11 @@ public abstract class EmployeeComponent {
         this.hasDependents = hasDependents;
     }
 
-    public List<Employee> getSubordinates() {
+    public List<EmployeeComponent> getSubordinates() {
         return subordinates;
     }
 
-    public void setSubordinates(List<Employee> subordinates) {
+    public void setSubordinates(List<EmployeeComponent> subordinates) {
         this.subordinates = subordinates;
     }
 }

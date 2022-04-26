@@ -23,41 +23,41 @@ public class Driver {
         crado.add(researchAssistant);
         crado.add(dataScientist);
 
-
+        Company company = new Company(ceo);
 
         //Report 1
         System.out.println("REPORT 1");
-        System.out.print(ceo.getGraph());
+        System.out.print(company.employees.getGraph());
 
         //Report 2
         System.out.println("REPORT 2");
-        System.out.print(ceo.getReport2());
+        System.out.print(company.employees.getReport2());
 
         //Report 3
         System.out.println("REPORT 3");
-        System.out.print(ceo.getReport3());
+        System.out.print(company.employees.getReport3());
 
         //Report 4
         System.out.println("REPORT 4");
-        System.out.print(ceo.getReport4());
+        System.out.print(company.employees.getReport4());
 
         dataScientist.add(new Employee("Joyce English", "ML Engineer", "R&D", 140000, "Female"));
 
         //new Report 1
         System.out.println("NEW REPORT 1");
-        System.out.print(ceo.getGraph());
+        System.out.print(company.employees.getGraph());
 
         //new Report 2
         System.out.println("NEW REPORT 2");
-        System.out.print(ceo.getReport2());
+        System.out.print(company.employees.getReport2());
 
         //new Report 3
         System.out.println("NEW REPORT 3");
-        System.out.print(ceo.getReport3());
+        System.out.print(company.employees.getReport3());
 
         //new Report 4
         System.out.println("NEW REPORT 4");
-        System.out.print(ceo.getReport4());
+        System.out.print(company.employees.getReport4());
     }
 
 }

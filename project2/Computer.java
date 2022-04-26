@@ -11,17 +11,15 @@ abstract public class Computer {
     public String getName() { return name; }
 
     void prepare() {
-        System.out.println("Making a " + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.println("Adding toppings: ");
+        System.out.println("adding " + memory);
+        System.out.println("adding " + HDD);
+        System.out.println("adding " + CPU);
+        System.out.println("adding " + GPU)
         for (String extra: extras) {
-            System.out.println("    " + topping);
+            System.out.println("adding " + extra + "\n");
         }
     }
-    void bake() { System.out.println("Bake for 25 minutes at 350"); }
-    void cut() { System.out.println("Cut the pizza into diagonal slices "); }
-    void box() { System.out.println("Place pizza in official PizzaStore box"); }
+
 
     public String toString() {
         StringBuffer display = new StringBuffer();

@@ -42,7 +42,7 @@ public class Tests {
         iceCreamTest2 = new Vanilla(new Sprinkles( new Caramel(iceCreamTest2)));
 
         IceCream iceCreamTest3 = new SingleScoop();
-        iceCreamTest3 = new Vanilla(new Caramel( new Sprinkles(iceCreamTest3)));
+        iceCreamTest3 = new Caramel(new Vanilla( new Sprinkles(iceCreamTest3)));
         assertTrue((iceCreamTest2.getCost() == iceCreamTest3.getCost()));
     }
 

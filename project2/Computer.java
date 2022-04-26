@@ -1,11 +1,11 @@
 package project2;
 import java.util.ArrayList;
 public abstract class Computer {
-    String name;
-    String memory;
-    String CPU;
-    String HDD;
-    String GPU;
+    protected String name;
+    protected String memory;
+    protected String CPU;
+    protected String HDD;
+    protected String GPU;
     ArrayList<String> extras = new ArrayList<>();
 
     public String getName() { return name; }

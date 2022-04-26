@@ -4,13 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee extends EmployeeComponent {
-    private String name;
-    private String position;
-    private String department;
-    private int salary;
-    private String gender;
-    private boolean hasDependents;
-    private List<EmployeeComponent> subordinates = new ArrayList<>();
+
 
     public Employee(String name, String position, String department, int salary, String gender, boolean hasDependents) {
         super(name, position, department, salary, gender, hasDependents);
@@ -147,61 +141,4 @@ public class Employee extends EmployeeComponent {
 
     }
 
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public boolean isHasDependents() {
-        return hasDependents;
-    }
-
-    public void setHasDependents(boolean hasDependents) {
-        this.hasDependents = hasDependents;
-    }
-
-    public List<EmployeeComponent> getSubordinates() {
-        return subordinates;
-    }
-
-    public void setSubordinates(List<EmployeeComponent> subordinates) {
-        this.subordinates = subordinates;
-    }
 }

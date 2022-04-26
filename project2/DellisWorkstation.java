@@ -1,6 +1,6 @@
 public class DellisWorkstation extends Computer {
     public DellisWorkstation() {
-        name = "Dellis Laptop";
+        name = "Dellis Workstation";
         memory = "Dellis memory";
         CPU = "Dellis cpu";
         HDD = "Dellis hdd";

@@ -10,6 +10,11 @@ public class Sprinkles extends ToppingDecorator {
     }
 
     public double getCost() {
-        return iceCream.getCost() + 0.79;
+        double cost = iceCream.getCost();
+        cost += 0.79;
+        cost*=100;
+        cost = Math.round(cost);
+        cost/=100;
+        return cost;
     }
 }

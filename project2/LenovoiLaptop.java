@@ -1,3 +1,5 @@
+package project2;
+
 public class LenovoiLaptop extends Computer {
     public LenovoiLaptop() {
         name = "Lenovoi Laptop";

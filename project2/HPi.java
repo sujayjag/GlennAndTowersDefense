@@ -1,4 +1,5 @@
-public class Lenovoi extends Pineapple {
+package project2;
+public class HPi extends Pineapple {
     Computer createComputer(String type) {
         if (type.equals("workstation")) {
             return new HPiWorkstation();

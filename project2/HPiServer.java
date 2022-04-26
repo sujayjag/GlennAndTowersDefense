@@ -1,3 +1,6 @@
+package project2;
+
+
 public class HPiServer extends Computer {
     public HPiServer() {
         name = "HPi Server";

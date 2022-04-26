@@ -1,6 +1,6 @@
+package project2;
 import java.util.ArrayList;
-
-abstract public class Computer {
+public abstract class Computer {
     String name;
     String memory;
     String CPU;
@@ -14,7 +14,7 @@ abstract public class Computer {
         System.out.println("adding " + memory);
         System.out.println("adding " + HDD);
         System.out.println("adding " + CPU);
-        System.out.println("adding " + GPU)
+        System.out.println("adding " + GPU);
         for (String extra: extras) {
             System.out.println("adding " + extra + "\n");
         }
@@ -24,10 +24,12 @@ abstract public class Computer {
     public String toString() {
         StringBuffer display = new StringBuffer();
         display.append("---- " + name + "----\n");
-        display.append(dough + "\n");
-        display.append(sauce + "\n");
-        for (String topping: toppings) {
-            display.append(topping + "\n");
+        display.append(memory + "\n");
+        display.append(CPU + "\n");
+        display.append(HDD + "\n");
+        display.append(GPU + "\n");
+        for (String extra: extras) {
+            display.append(extra + "\n");
         }
 
         return display.toString();

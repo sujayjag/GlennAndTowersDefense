@@ -1,3 +1,5 @@
+package project2;
+
 public class DellisWorkstation extends Computer {
     public DellisWorkstation() {
         name = "Dellis Workstation";

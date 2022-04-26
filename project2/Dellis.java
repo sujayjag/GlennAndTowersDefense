@@ -1,3 +1,5 @@
+package project2;
+
 public class Dellis extends Pineapple {
     Computer createComputer(String type) {
         if (type.equals("workstation")) {

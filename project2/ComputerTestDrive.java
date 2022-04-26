@@ -9,7 +9,6 @@ public class ComputerTestDrive {
         System.out.println("Michael ordered a Dellis workstation");
         Dellis.orderComputer("workstation");
    
-
         System.out.println("Hanna ordered a HPi server");
         HPi.orderComputer("server");
 

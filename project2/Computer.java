@@ -9,6 +9,11 @@ public abstract class Computer {
     ArrayList<String> extras = new ArrayList<>();
 
     public String getName() { return name; }
+    public String getMemory() { return memory; }
+    public String getCPU() { return CPU; }
+    public String getHDD() { return HDD; }
+    public String getGPU() { return GPU; }
+    public ArrayList<String> getExtras() { return extras; }
 
     void prepare() {
         System.out.println("adding " + memory);
@@ -18,20 +23,5 @@ public abstract class Computer {
         for (String extra: extras) {
             System.out.println("adding " + extra);
         }
-    }
-
-
-    public String toString() {
-        StringBuffer display = new StringBuffer();
-        display.append("---- " + name + "----\n");
-        display.append(memory + "\n");
-        display.append(CPU + "\n");
-        display.append(HDD + "\n");
-        display.append(GPU + "\n");
-        for (String extra: extras) {
-            display.append(extra + "\n");
-        }
-
-        return display.toString();
     }
 }

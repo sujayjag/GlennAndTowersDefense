@@ -1,6 +1,5 @@
 package project2;
 
-
 public class Lenovoi extends Pineapple {
     Computer createComputer(String type) {
         if (type.equals("workstation")) {

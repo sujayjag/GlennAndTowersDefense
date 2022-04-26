@@ -6,7 +6,7 @@ public class HPi extends Pineapple {
         } else if (type.equals("laptop")) {
             return new HPiLaptop();
         } else if (type.equals("server")) {
-            return new HPiWorkstation();
+            return new HPiServer();
         } else {
             return null;
         }

@@ -16,7 +16,7 @@ public abstract class Computer {
         System.out.println("adding " + CPU);
         System.out.println("adding " + GPU);
         for (String extra: extras) {
-            System.out.println("adding " + extra + "\n");
+            System.out.println("adding " + extra);
         }
     }
 

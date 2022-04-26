@@ -1,4 +1,6 @@
-abstract public class Pineapple {
+package project2;
+
+public abstract class Pineapple {
     abstract Computer createComputer(String item);
 
     public Computer orderComputer(String type) {
